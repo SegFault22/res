@@ -1,17 +1,12 @@
 -- Item system
 
-
 res_item_types = {}
 res_items = {}
-
-
 
 function res.add_item_type(id,name,materialtype)
 	table.insert(res_item_types,{ id,name,materialtype })
 	res.log("verbose","Added item type with id: "..id)
 end
-
-
 
 function res.add_item(type,itemid,properties)
 	if type == "item" then

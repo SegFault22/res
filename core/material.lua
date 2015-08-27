@@ -24,7 +24,7 @@ function res.add_material_items(materialid,itemslist)
 		local itemid = row[1]
 		local id = "res:"..itemid.."_"..materialid
 		local properties = {
-			description = res.get_material_name(materialid).." "..itemid,
+			description = res.get_material_name(materialid).." "..res.get_itemtype_name(itemid),
 			inventory_image = "res_"..itemid.."_"..materialid..".png",
 			on_place_on_ground = minetest.craftitem_place_item,
 		}

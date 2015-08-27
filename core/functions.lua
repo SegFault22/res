@@ -39,6 +39,16 @@ function res.get_material_weight(id)
 	end
 end
 
+function res.get_itemtype_name(id)
+	for _, row in ipairs(res_item_types) do
+		local row_1 = row[1]
+		local row_2 = row[2]
+		if row_1 == id then
+			return row_2
+		end
+	end
+end
+
 function res.get_nodetype_name(id)
 	for _, row in ipairs(res_node_types) do
 		local row_1 = row[1]
